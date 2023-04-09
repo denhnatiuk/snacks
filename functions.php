@@ -1,12 +1,12 @@
 <?php
 /**
- * Description:    main Pb Theme functions and definitions
+ * Description:    main Snacks Theme functions and definitions
  *
  * @package        snacks
  * @since          1.0.0
  * @author         Den Hnatiuk
  * @copyright      Copyright © 2023, Den Hnatiuk(@denhnatiuk)
- * @link           https://denyshnatiuk.github.io/Pb/
+ * @link           https://denyshnatiuk.github.io/snacks/
  * @license        https://www.gnu.org/licenses/gpl-3.0.html GNU General Public License Version 3
  */
 
@@ -18,7 +18,7 @@ function snacks_setup()
     
     add_theme_support( 'wp-block-styles' );
 
-    add_editor_style( 'editor-style.css' );
+    add_editor_style( './assets/css/editor-style.css' );
 
     /**
     * // automaticly enabled features

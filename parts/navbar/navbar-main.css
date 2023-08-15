@@ -1,0 +1,96 @@
+.navbar-main{
+  --brakepoint-xs: var(--br-xs, 768px);
+  --brakepoint-sm: var(--br-sm, 768px);
+  --brakepoint-md: var(--br-md, 1024px);
+  --brakepoint-lg: var(--br-lg, 1200px);
+  --brakepoint-xl: var(--br-xl, 2400px);
+
+  /* container: navbar-main, inline-size; */
+  container-type: inline-size;
+  container-name: navbar-main;
+  border:1px dashed red;
+  /* width:100dvw; */
+  z-index: 9999;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  background: aliceblue;
+}
+.navbar-main .nav-burger-label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:4rem;
+  height:4rem;
+  border:1px dashed red;
+}
+#mainNavToggler {
+  display:none;
+}
+
+.navbar-main .nav{
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  width:0;
+  visibility: hidden;
+}
+.navbar-main .nav .nav-item{
+  padding: clamp(1rem, 1cqi, 3rem);
+}
+@container ( inline-size < 768px){
+  /* #mainNavToggler{display: block;} */
+
+  .nav-burger-label{
+    position: absolute;
+    top:0;
+    left:0;
+  }
+  .nav-burger-label .nav-burger,
+  .nav-burger-label .nav-burger:before,
+  .nav-burger-label .nav-burger:after{
+    content:"";
+    display:block;
+    float:none;
+    width:2rem;
+    height:0.3rem;
+    background: black;
+  }
+  .nav-burger-label .nav-burger:before{
+    margin-top:-.9rem;
+  }
+  .nav-burger-label .nav-burger:after{
+    margin-top:1.5rem;
+  }
+  #mainNavToggler:checked ~ .nav-burger-label[for="mainNavToggler"]{
+    border:2px solid yellow;
+  }
+  #mainNavToggler:checked + .nav{
+    visibility: visible;
+    margin-top:4rem;
+    gap: 1rem;
+    width: clamp(300px, 80dvw, 400px);
+    min-width:300px;
+    border:2px solid yellow;
+  }
+}
+
+
+@container (inline-size > 768px) {
+  .navbar-main .nav{
+    font-size: clamp(1rem, 1cqi, 3rem);
+    color: black;
+    display: flex;
+    flex-flow:row nowrap;
+    align-items:center;
+    justify-content:center;
+  }
+  .nav-burger-label:target + .nav{
+    border:2px solid green;
+    visibility: visible;
+    margin-top:4rem;
+    gap: 1rem;
+    width: clamp(300px, 80dvw, 400px);
+    min-width:300px;
+    border:2px solid yellow;
+  }
+}

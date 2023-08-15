@@ -1,0 +1,18 @@
+:root{
+  --font-size: 14px;
+  /* breakpoints */
+  --screen-sd: 640 px;
+  --screen-hd: 1280 px;
+  --screen-fhd: 1920 px;
+  --screen-4k: 2560 px;
+  --screen-8k: 7680 px;
+}
+/*
+4320p (8K): 7680 x 4320
+2160p (4K): 3840 x 2160
+1440p (2K): 2560 x 1440
+1080p (Full HD): 1920 x 1080
+720p (HD): 1280 x 720
+480p (SD): 854 x 480
+360p (SD): 640 x 360
+*/

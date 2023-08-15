@@ -15,7 +15,7 @@ if ( ! function_exists( 'snacks_setup' ) ) :
 add_action( 'after_setup_theme', 'snacks_setup' );
 function snacks_setup()
 {
-    
+
     add_theme_support( 'wp-block-styles' );
 
     add_editor_style( './assets/css/editor-style.css' );
@@ -30,23 +30,23 @@ function snacks_setup()
     */
 
     // settings.typography.fontSizes
-    // add_theme_support( ‘editor-font-sizes’, array() );	 
+    // add_theme_support( ‘editor-font-sizes’, array() );
 
     // settings.typography.lineHeight
-    // add_theme_support( ‘custom-line-height’ ); 
+    // add_theme_support( ‘custom-line-height’ );
 
     //	settings.layout
     // add_theme_support( ‘align-wide’ );
-    
+
     // settings.color.palette
     // add_theme_support( ‘editor-color-palette’, array() );
-    
-    // settings.color.gradients 
-    // add_theme_support( ‘editor-gradient-presets’, array() );	
-    
+
+    // settings.color.gradients
+    // add_theme_support( ‘editor-gradient-presets’, array() );
+
     //	settings.spacing
     // add_theme_support( ‘custom-spacing’ );
-    
+
     //	settings.spacing.units
     // add_theme_support( ‘custom-units’, array() );
 
@@ -55,8 +55,11 @@ function snacks_setup()
 add_action( 'wp_enqueue_scripts', 'snacks_assets' );
 function snacks_assets()
 {
-    
+
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1' );
+    wp_enqueue_style( 'css-variables', get_template_directory_uri() . '/assets/css/variables.css', array(), '1' );
+    wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css', array(), '1' );
+    wp_enqueue_style( 'editor-style', get_template_directory_uri()  . '/assets/css/editor-style.css', array(), '1' );
 
 	// wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/slider.css', array(), '1.1', 'all' );
 

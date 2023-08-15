@@ -1,0 +1,18 @@
+// @import "./abstract/_variables.scss";
+// body{
+//   width: 100dvw;
+//   header{
+//     width: 100dvw;
+//   }
+// }
+
+body{
+  width:100dvh;
+  overflow-x: hidden;
+}
+
+@import "../../parts/header/header.css";
+@import "../../parts/header/short-header.css";
+@import "../../parts/brand/brand.css";
+@import "../../parts/navbar/navbar-main.css";
+@import "../../parts/header/hero-header.css";

@@ -1,0 +1,24 @@
+/* @supports (font-size: 1cqi){
+
+} */
+
+.brand{
+  container-type: inline-size;
+  container-name: brand;
+  /* background-color: yellow; */
+  display: flex;
+  flex-flow: column-reverse wrap;
+}
+.brand h1 {
+  font-size: clamp(1.75rem, 4cqi, 3rem);
+}
+.brand img{
+  width: clamp(100px, 10cqi, 200px);
+}
+
+@container (inline-size > 700px) {
+  .brand h1 {
+    font-size: clamp(1rem, 4cqi, 3rem);
+    color: black;
+  }
+}

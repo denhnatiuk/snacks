@@ -1,0 +1,18 @@
+.hero-header{
+  container-type: inline-size;
+  container-name: hero-header;
+}
+.hero-header, .hero-header .promo{
+  min-width:100dvw;
+  min-height:80dvh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content:center;
+}
+.hero-header .promo img{
+  min-width:100dvw;
+  min-height:100dvh;
+  position: absolute;
+  z-index:-1;
+}

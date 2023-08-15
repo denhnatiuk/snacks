@@ -1,0 +1,40 @@
+
+/* mobile screens */
+.short-header{
+  position: fixed;
+  z-index:9999;
+  top:0;
+  left:calc(50% - 40dvw);
+  width:80dvw;
+  height:10dvh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  border:1px solid red;
+}
+
+@container (inline-size < 768){
+  .short-header:after{
+    content:"";
+    background:rgba(0,0,0,.5);
+    width:20dvw;
+    height:100dvh;
+  }
+}
+
+@container (inline-size > 768px) {
+  .short-header{
+    position: relative;
+    z-index:9999;
+    margin:1rem auto;
+    width:80dvw;
+    height:10dvh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+  }
+}

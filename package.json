@@ -1,0 +1,21 @@
+{
+  "name": "snacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "direnv allow .",
+    "watch:sass": "rollup -c -w",
+    "build:sass": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "rollup": "^3.26.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.63.6"
+  }
+}

@@ -1,18 +1,16 @@
 
 /* mobile screens */
 .short-header{
-  position: fixed;
-  z-index:9999;
-  top:0;
-  left:calc(50% - 40dvw);
-  width:80dvw;
-  height:10dvh;
+  width:100dvw;
+  height:clamp(60px, 10dvh, 100px);
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row-reverse wrap;
   align-items: baseline;
   justify-content: space-between;
-  backdrop-filter: blur(10px);
-  border:1px solid red;
+  /* backdrop-filter: blur(10px);
+  border:1px solid red; */
+  /* margin:0;
+  padding:0; */
 }
 
 @container (inline-size < 768){

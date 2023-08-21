@@ -2,6 +2,11 @@
   position: relative;
   box-sizing: border-box;
 }
+.site-header.fixed{
+  position: fixed;
+  top:0;
+  left:0;
+}
 .site-header>.long-header{
   flex-flow: column wrap;
   justify-content: center;

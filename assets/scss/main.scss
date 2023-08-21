@@ -1,4 +1,5 @@
-// @import "./abstract/_variables.scss";
+@import "./abstract/_variables.scss";
+@import "_typography.scss";
 // body{
 //   width: 100dvw;
 //   header{
@@ -7,10 +8,27 @@
 // }
 
 body{
-  width:100dvh;
+  width:100dvw;
   overflow-x: hidden;
 }
 
+// .container{
+//   width:1024px;
+//   &-fluid{
+//     width:100dvw;
+//   }
+// }
+
+// Media
+@media screen and (max-width: 768px) {
+  // body{
+  //   display: grid;
+  //   grid-template-columns: 12fr;
+  //   grid-template-rows: 12fr;
+  // }
+}
+
+// Blocks
 @import "../../parts/header/header.css";
 @import "../../parts/header/short-header.css";
 @import "../../parts/brand/brand.css";

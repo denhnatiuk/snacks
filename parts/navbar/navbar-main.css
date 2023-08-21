@@ -1,3 +1,9 @@
+/*
+== structure ==
+1.Globals
+2. XS screen
+ */
+
 .navbar-main{
   --brakepoint-xs: var(--br-xs, 768px);
   --brakepoint-sm: var(--br-sm, 768px);
